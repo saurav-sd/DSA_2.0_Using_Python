@@ -1,0 +1,3 @@
+I am learning Python
+FastAPI is next
+Backend is fun

@@ -65,3 +65,11 @@ node1 = ListNode(1, node2)
 
 result = reverseList_Bruteforce(node1)
 print("Reversed Linkedlist : ", result)
+
+
+# What happens if you remove next_temp?
+# If you remove next_temp, you will lose the reference to the next node in the original list.
+# --> This means that once you reverse the link for the current node, you won't be able to access the next node to continue the reversal process. As a result, the linked list will become disconnected, and you won't be able to reverse the entire list correctly. The reversal process relies on having access to the next node before changing the current node's next pointer, so removing next_temp would break this logic and lead to an incomplete reversal.
+
+# What happens if you return head instead of prev?
+# --> If you return head instead of prev, you will not get the correct reversed linked list. The head variable still points to the original head of the list, which is now the tail of the reversed list. The prev variable, on the other hand, points to the new head of the reversed list after the reversal process is complete. Returning head would give you a reference to the old head (now tail), while returning prev gives you a reference to the new head of the reversed list, which is what you want.

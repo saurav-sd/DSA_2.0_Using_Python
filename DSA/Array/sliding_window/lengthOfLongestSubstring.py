@@ -17,3 +17,20 @@ def lengthOfLongestSubstring(str):
 if __name__ == "__main__":
     str = "abcabcbb"
     print("max lnght substring : ", lengthOfLongestSubstring(str))
+    
+
+# using dictionart
+
+def lengthOfLongestSubstring(str):
+    char_dict = {}
+    left = 0
+    max_len = 0
+
+    for i in range(len(str)):
+        if str[i] in char_dict and char_dict[str[i]] >= left:
+            left = char_dict[str[i]] + 1
+
+        char_dict[str[i]] = i
+        max_len = max(max_len, i-left+1)
+    
+    return max_len

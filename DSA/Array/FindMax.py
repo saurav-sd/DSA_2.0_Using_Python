@@ -1,5 +1,5 @@
 def solve(nums):
-    max_val = nums[0]
+    max_val = float("-inf")
 
     for num in nums:
         if num > max_val:
@@ -9,7 +9,7 @@ def solve(nums):
 
 
 if __name__ == "__main__":
-    nums = [1,3,2,46,4,]
+    nums = [2,40, 23, 18, 15 ]
     print("Max element : ", solve(nums))
 
 # time and space complexity

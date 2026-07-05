@@ -1,0 +1,1 @@
+# check if the k sum exists in the array or not
